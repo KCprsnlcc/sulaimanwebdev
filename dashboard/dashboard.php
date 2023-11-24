@@ -99,7 +99,7 @@
                 <?php
                 // Connect to your database and fetch data from web_tbl
                 include "../config/dbconn.php";
-                $sql = "SELECT * FROM web_tbl";
+                $sql = "SELECT * FROM regdb";
                 $result = $connection->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {

@@ -93,7 +93,7 @@
 <body>
 <div class="container">
     <h2>Login</h2>
-    <form action="login.php" method="post">
+    <form action="index.php" method="post">
         <div class="input-field">
             <input type="text" id="email" name="email" class="validate" required>
             <label for="email">Email:</label>
@@ -119,8 +119,12 @@
     });
 
     function redirectToRegistration() {
-        window.location.href = '../register/register.php';
+        window.location.href = 'register/register.php';
     }
 </script>
 </body>
 </html>
+
+<?php
+include "../config/dbcon.php";
+?>

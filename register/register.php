@@ -1,5 +1,5 @@
 <?php
-include "../config/dbconn.php";
+include "../config/dbcon.php";
 
 $registrationMessage = "";
 
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container">
         <h2>Registration Form</h2>
 
-        <form method="post" action="index.php">
+        <form method="post" action="register.php">
             <div class="input-field">
                 <input type="text" id="user_id" name="user_id" class="validate" required>
                 <label for="user_id">User ID:</label>
@@ -168,11 +168,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <script>
             <?php if (!empty($registrationMessage)) { ?>
                 alert('<?php echo $registrationMessage; ?>');
-                window.location.href = '../log_in/login.php'; // Redirect to the login page
+                window.location.href = '../index.php'; // Redirect to the login page
             <?php } ?>
             
             function redirectToLogin() {
-                window.location.href = '../log_in/login.php';
+                window.location.href = '../index.php';
             }
         </script>
     </div>
